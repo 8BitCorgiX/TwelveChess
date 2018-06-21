@@ -1,3 +1,5 @@
 ﻿  1.cpp
+d:\data kuliah\sem 4\sd\strukturdata\1.cpp(494): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+d:\data kuliah\sem 4\sd\strukturdata\1.cpp(118): warning C4715: 'DoubleLinkedList::getCoor': not all control paths return a value
 1.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
   strukturdata.vcxproj -> D:\DATA KULIAH\Sem 4\SD\strukturdata\Debug\strukturdata.exe
