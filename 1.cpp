@@ -4,7 +4,7 @@ using namespace std;
 
 struct node
 {
-	char data;
+	int data;
 	node *next;
 	node *prev;
 };
@@ -21,7 +21,7 @@ public:
 		tail = NULL;
 		idx = 0;
 	}
-	void createNode(char value)
+	void createNode(int value)
 	{
 		node *temp = new node;
 		temp->data = value;
@@ -102,6 +102,19 @@ public:
 			}
 			lptr = ptr;
 		} while (swap);
+	}
+	int getCoor(int find)
+	{
+		node *temp = new node;
+		temp = head;
+		for (int i = 0;i < idx; i++)
+		{
+			if (find == i) 
+			{
+				return temp->data;
+			}
+			temp = temp->next;
+		}
 	}
 };
 
@@ -368,36 +381,40 @@ int main()
 	//map coordinate list
 	DoubleLinkedList mapcoorX, mapcoorY;
 	//respawnmerah
-	mapcoorX.createNode(28); mapcoorY.createNode(672);
-	mapcoorX.createNode(28 + 168); mapcoorY.createNode(672);
-	mapcoorX.createNode(28 + 168+168); mapcoorY.createNode(672);
+	mapcoorX.createNode(28); mapcoorY.createNode(672); //idx 0
+	mapcoorX.createNode(28 + 168); mapcoorY.createNode(672); //idx 1
+	mapcoorX.createNode(28 + 168+168); mapcoorY.createNode(672); //idx 2
 
 	//4
-	mapcoorX.createNode(28); mapcoorY.createNode(541);
-	mapcoorX.createNode(28 + 168); mapcoorY.createNode(541);
-	mapcoorX.createNode(28 + 168 + 168); mapcoorY.createNode(541);
+	mapcoorX.createNode(28); mapcoorY.createNode(541); //idx 3
+	mapcoorX.createNode(28 + 168); mapcoorY.createNode(541); //idx 4
+	mapcoorX.createNode(28 + 168 + 168); mapcoorY.createNode(541); //idx 5
 
 	//3
-	mapcoorX.createNode(28); mapcoorY.createNode(410);
-	mapcoorX.createNode(28 + 168); mapcoorY.createNode(410);
-	mapcoorX.createNode(28 + 168 + 168); mapcoorY.createNode(410);
+	mapcoorX.createNode(28); mapcoorY.createNode(410); //idx 6
+	mapcoorX.createNode(28 + 168); mapcoorY.createNode(410); //idx 7
+	mapcoorX.createNode(28 + 168 + 168); mapcoorY.createNode(410); //idx 8
 
 	//2
-	mapcoorX.createNode(28); mapcoorY.createNode(279);
-	mapcoorX.createNode(28 + 168); mapcoorY.createNode(279);
-	mapcoorX.createNode(28 + 168 + 168); mapcoorY.createNode(279);
+	mapcoorX.createNode(28); mapcoorY.createNode(279); //idx 9
+	mapcoorX.createNode(28 + 168); mapcoorY.createNode(279); //idx 10
+	mapcoorX.createNode(28 + 168 + 168); mapcoorY.createNode(279); //idx 11
 
 	//1
-	mapcoorX.createNode(28); mapcoorY.createNode(148);
-	mapcoorX.createNode(28 + 168); mapcoorY.createNode(148);
-	mapcoorX.createNode(28 + 168 + 168); mapcoorY.createNode(148);
+	mapcoorX.createNode(28); mapcoorY.createNode(148); //idx 12
+	mapcoorX.createNode(28 + 168); mapcoorY.createNode(148); //idx 13
+	mapcoorX.createNode(28 + 168 + 168); mapcoorY.createNode(148); //idx 14
 
 	//respawnbiru
-	mapcoorX.createNode(28); mapcoorY.createNode(17);
-	mapcoorX.createNode(28 + 168); mapcoorY.createNode(17);
-	mapcoorX.createNode(28 + 168 + 168); mapcoorY.createNode(17);
+	mapcoorX.createNode(28); mapcoorY.createNode(17); //idx 15
+	mapcoorX.createNode(28 + 168); mapcoorY.createNode(17); //idx 16
+	mapcoorX.createNode(28 + 168 + 168); mapcoorY.createNode(17); //idx 17
 
+<<<<<<< HEAD
 	mapcoorX.display();
+=======
+	cout << mapcoorX.getCoor(2) << " " << mapcoorY.getCoor(4) << endl;
+>>>>>>> 670bfdfe1c3cea8278b369cce2721f0a887edf9c
 
 	//object chess piece;
 	King kingred, kingblue;
@@ -477,7 +494,10 @@ int main()
 	menteribiru.setPosition(sf::Vector2f(28, 148));
 	rajabiru.setPosition(sf::Vector2f(193, 148));
 	bentengbiru.setPosition(sf::Vector2f(361, 148));
-	pionbiru.setPosition(sf::Vector2f(193, 279));
+	//pionbiru.setPosition(sf::Vector2f(193, 279));
+	pionbiru.setPosition(sf::Vector2f(mapcoorX.getCoor(2), mapcoorY.getCoor(6)));
+	
+
 
 
 	//menterimerah
@@ -534,7 +554,7 @@ int main()
 		pm2.x / pionmerah.getLocalBounds().height,
 		pm2.y / pionmerah.getLocalBounds().height);
 
-	//starting point biru
+	//starting point merah
 	bentengmerah.setPosition(sf::Vector2f(28, 541));
 	rajamerah.setPosition(sf::Vector2f(193, 541));
 	menterimerah.setPosition(sf::Vector2f(361, 541));
