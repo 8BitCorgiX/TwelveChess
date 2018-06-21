@@ -2,8 +2,375 @@
 using namespace std;
 #include <SFML/Graphics.hpp>
 
+struct node
+{
+	char data;
+	node *next;
+	node *prev;
+};
+
+class DoubleLinkedList
+{
+private:
+	node * head, *tail;
+	int idx;
+public:
+	DoubleLinkedList()
+	{
+		head = NULL;
+		tail = NULL;
+		idx = 0;
+	}
+	void createNode(char value)
+	{
+		node *temp = new node;
+		temp->data = value;
+		if (head == tail && head == NULL)
+		{
+			head = temp;
+			tail = temp;
+			head->next = tail->next = NULL;
+			head->prev = tail->prev = NULL;
+		}
+		else
+		{
+			tail->next = temp;
+			temp->prev = tail;
+			tail = temp;
+			head->prev = tail;
+			tail->next = head;
+		}
+		idx++;
+	}
+	void display()
+	{
+		node *temp = new node;
+		temp = head;
+
+		for (int i = 0;i<idx;i++)
+		{
+			cout << temp->data << "\t";
+			temp = temp->next;
+		}
+		cout << endl;
+	}
+	void reversedisplay()
+	{
+		cout << "Reverse List: ";
+		node *p1, *p2;
+		p1 = head;
+		p2 = p1->next;
+		p1->next = NULL;
+		p1->prev = p2;
+		while (p2 != head)
+		{
+			p2->prev = p2->next;
+			p2->next = p1;
+			p1 = p2;
+			p2 = p2->prev;
+		}
+		tail = head;
+		head = p1;
+		display();
+	}
+	void sort(int pick)
+	{
+		bool swap;
+		node *ptr, *lptr = NULL;
+		do
+		{
+			ptr = head;
+			swap = false;
+			while (lptr != ptr->next)
+			{
+				char temp;
+				if (ptr->data > ptr->next->data && pick == 1)
+				{
+					swap = true;
+					temp = ptr->data;
+					ptr->data = ptr->next->data;
+					ptr->next->data = temp;
+				}
+				else if (ptr->data < ptr->next->data && pick == 2)
+				{
+					swap = true;
+					temp = ptr->data;
+					ptr->data = ptr->next->data;
+					ptr->next->data = temp;
+				}
+				ptr = ptr->next;
+			}
+			lptr = ptr;
+		} while (swap);
+	}
+};
+
+class Soldier
+{
+protected:
+	double x, y;
+	double nextx, nexty;
+	bool alive;
+	int alternative;
+public:
+	Soldier()
+	{}
+	Soldier(double xx, double yy, double nextxx, double nextyy, bool alivee)
+	{
+		x = xx;
+		y = yy;
+		nextx = nextxx;
+		nexty = nextyy;
+		alive = alivee;
+	}
+	void setX(double xx)
+	{
+		x = xx;
+	}
+	double getX()
+	{
+		return x;
+	}
+	void setY(double yy)
+	{
+		y = yy;
+	}
+	double getY()
+	{
+		return y;
+	}
+	void setNextX(double nextxx)
+	{
+		nextx = nextxx;
+	}
+	double getNextX()
+	{
+		return nextx;
+	}
+	void setNextY(double nextyy)
+	{
+		nexty = nextyy;
+	}
+	double getNextY()
+	{
+		return nexty;
+	}
+	bool isAlive()
+	{
+		if (isAlive())
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+};
+
+class King : public Soldier
+{
+protected:
+
+public:
+	King()
+	{}
+	King(double xx, double yy, double nextxx, double nextyy, bool alivee, int alter)
+	{
+		x = xx;
+		y = yy;
+		nextx = nextxx;
+		nexty = nextyy;
+		alive = alivee;
+		alternative = alter;
+	}
+	void setAlter(int alter)
+	{
+		alternative = alter;
+	}
+	void getAlter()
+	{
+		if (alternative == 1)
+		{
+
+		}
+		else if (alternative == 2)
+		{
+		}
+		else if (alternative == 3)
+		{
+		}
+		else if (alternative == 4)
+		{
+
+		}
+		else if (alternative == 5)
+		{
+		}
+		else if (alternative == 6)
+		{
+
+		}
+		else if (alternative == 7)
+		{
+
+		}
+		else if (alternative == 8)
+		{
+
+		}
+	}
+
+
+};
+
+class Rook : public Soldier
+{
+protected:
+
+public:
+	Rook()
+	{}
+	Rook(double xx, double yy, double nextxx, double nextyy, bool alivee)
+	{
+		x = xx;
+		y = yy;
+		nextx = nextxx;
+		nexty = nextyy;
+		alive = alivee;
+	}
+	void setAlter(int alter)
+	{
+		alternative = alter;
+	}
+	void getAlter()
+	{
+		if (alternative == 1)
+		{
+
+		}
+		else if (alternative == 2)
+		{
+		}
+		else if (alternative == 3)
+		{
+		}
+		else if (alternative == 4)
+		{
+
+		}
+	}
+};
+
+class Bishop : public Soldier
+{
+public:
+	Bishop()
+	{}
+	Bishop(double xx, double yy, double nextxx, double nextyy, bool alivee)
+	{
+		x = xx;
+		y = yy;
+		nextx = nextxx;
+		nexty = nextyy;
+		alive = alivee;
+	}
+	void setAlter(int alter)
+	{
+		alternative = alter;
+	}
+	void getAlter()
+	{
+		if (alternative == 1)
+		{
+
+		}
+		else if (alternative == 2)
+		{
+		}
+		else if (alternative == 3)
+		{
+		}
+		else if (alternative == 4)
+		{
+
+		}
+	}
+};
+
+class Pawn : public Soldier
+{
+protected:
+	bool promotion;
+public:
+	Pawn()
+	{}
+	Pawn(double xx, double yy, double nextxx, double nextyy, bool alivee, bool promotionn)
+	{
+		x = xx;
+		y = yy;
+		nextx = nextxx;
+		nexty = nextyy;
+		alive = alivee;
+		promotion = promotionn;
+	}
+	void setAlter(int alter)
+	{
+		alternative = alter;
+	}
+	void getAlter()
+	{
+		if (alternative == 1)
+		{
+
+		}
+		else if (alternative == 2)
+		{
+		}
+		else if (alternative == 3)
+		{
+		}
+		else if (alternative == 4)
+		{
+
+		}
+		else if (alternative == 5)
+		{
+		}
+		else if (alternative == 6)
+		{
+
+		}
+		else if (alternative == 7)
+		{
+
+		}
+		else if (alternative == 8)
+		{
+
+		}
+	}
+	bool isPromotion()
+	{
+		if (isPromotion())
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+};
+
 int main()
 {
+	//object chess piece;
+	King kingred, kingblue;
+	Rook rookred, rookblue;
+	Bishop bishopred, bishopblue;
+	Pawn pawnred, pawnblue;
+
 	sf::RenderWindow window(sf::VideoMode(1000,800), "SFML works!");
 	sf::Texture back;
 	if (!back.loadFromFile("asset/map.jpg"))
