@@ -1,39 +1,5 @@
 ﻿  1.cpp
-<<<<<<< HEAD
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(371): warning C4305: 'argument': truncation from 'int' to 'char'
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(371): warning C4309: 'argument': truncation of constant value
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(372): warning C4309: 'argument': truncation of constant value
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(372): warning C4305: 'argument': truncation from 'int' to 'char'
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(373): warning C4305: 'argument': truncation from 'int' to 'char'
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(373): warning C4309: 'argument': truncation of constant value
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(376): warning C4305: 'argument': truncation from 'int' to 'char'
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(376): warning C4309: 'argument': truncation of constant value
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(377): warning C4309: 'argument': truncation of constant value
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(377): warning C4305: 'argument': truncation from 'int' to 'char'
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(378): warning C4305: 'argument': truncation from 'int' to 'char'
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(378): warning C4309: 'argument': truncation of constant value
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(381): warning C4305: 'argument': truncation from 'int' to 'char'
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(381): warning C4309: 'argument': truncation of constant value
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(382): warning C4309: 'argument': truncation of constant value
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(382): warning C4305: 'argument': truncation from 'int' to 'char'
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(383): warning C4305: 'argument': truncation from 'int' to 'char'
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(383): warning C4309: 'argument': truncation of constant value
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(386): warning C4305: 'argument': truncation from 'int' to 'char'
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(386): warning C4309: 'argument': truncation of constant value
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(387): warning C4309: 'argument': truncation of constant value
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(387): warning C4305: 'argument': truncation from 'int' to 'char'
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(388): warning C4305: 'argument': truncation from 'int' to 'char'
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(388): warning C4309: 'argument': truncation of constant value
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(391): warning C4309: 'argument': truncation of constant value
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(392): warning C4309: 'argument': truncation of constant value
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(393): warning C4305: 'argument': truncation from 'int' to 'char'
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(393): warning C4309: 'argument': truncation of constant value
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(397): warning C4309: 'argument': truncation of constant value
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(398): warning C4305: 'argument': truncation from 'int' to 'char'
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(398): warning C4309: 'argument': truncation of constant value
-=======
-d:\data kuliah\sem 4\sd\strukturdata\1.cpp(494): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-d:\data kuliah\sem 4\sd\strukturdata\1.cpp(118): warning C4715: 'DoubleLinkedList::getCoor': not all control paths return a value
->>>>>>> 670bfdfe1c3cea8278b369cce2721f0a887edf9c
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(493): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(118): warning C4715: 'DoubleLinkedList::getCoor': not all control paths return a value
 1.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
   strukturdata.vcxproj -> C:\Users\USER\Documents\Visual Studio 2017\Projects\strukturdata\Debug\strukturdata.exe

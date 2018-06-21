@@ -410,11 +410,6 @@ int main()
 	mapcoorX.createNode(28 + 168); mapcoorY.createNode(17); //idx 16
 	mapcoorX.createNode(28 + 168 + 168); mapcoorY.createNode(17); //idx 17
 
-<<<<<<< HEAD
-	mapcoorX.display();
-=======
-	cout << mapcoorX.getCoor(2) << " " << mapcoorY.getCoor(4) << endl;
->>>>>>> 670bfdfe1c3cea8278b369cce2721f0a887edf9c
 
 	//object chess piece;
 	King kingred, kingblue;
