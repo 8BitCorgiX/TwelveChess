@@ -397,6 +397,7 @@ int main()
 	mapcoorX.createNode(28 + 168); mapcoorY.createNode(17);
 	mapcoorX.createNode(28 + 168 + 168); mapcoorY.createNode(17);
 
+	mapcoorX.display();
 
 	//object chess piece;
 	King kingred, kingblue;
