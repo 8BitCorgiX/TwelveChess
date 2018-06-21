@@ -1,0 +1,17 @@
+
+kanan 168+
+atas 131-
+bawah 131+
+
+x
+petak kiri 28 
+petak tengah 193
+petak kanan 361
+
+y
+respawnbiru 17
+petak 1 148
+petak 2 279
+petak 3 410
+petak 4 541
+respawnmerah 672
