@@ -365,6 +365,39 @@ public:
 
 int main()
 {
+	//map coordinate list
+	DoubleLinkedList mapcoorX, mapcoorY;
+	//respawnmerah
+	mapcoorX.createNode(28); mapcoorY.createNode(672);
+	mapcoorX.createNode(28 + 168); mapcoorY.createNode(672);
+	mapcoorX.createNode(28 + 168+168); mapcoorY.createNode(672);
+
+	//4
+	mapcoorX.createNode(28); mapcoorY.createNode(541);
+	mapcoorX.createNode(28 + 168); mapcoorY.createNode(541);
+	mapcoorX.createNode(28 + 168 + 168); mapcoorY.createNode(541);
+
+	//3
+	mapcoorX.createNode(28); mapcoorY.createNode(410);
+	mapcoorX.createNode(28 + 168); mapcoorY.createNode(410);
+	mapcoorX.createNode(28 + 168 + 168); mapcoorY.createNode(410);
+
+	//2
+	mapcoorX.createNode(28); mapcoorY.createNode(279);
+	mapcoorX.createNode(28 + 168); mapcoorY.createNode(279);
+	mapcoorX.createNode(28 + 168 + 168); mapcoorY.createNode(279);
+
+	//1
+	mapcoorX.createNode(28); mapcoorY.createNode(148);
+	mapcoorX.createNode(28 + 168); mapcoorY.createNode(148);
+	mapcoorX.createNode(28 + 168 + 168); mapcoorY.createNode(148);
+
+	//respawnbiru
+	mapcoorX.createNode(28); mapcoorY.createNode(17);
+	mapcoorX.createNode(28 + 168); mapcoorY.createNode(17);
+	mapcoorX.createNode(28 + 168 + 168); mapcoorY.createNode(17);
+
+
 	//object chess piece;
 	King kingred, kingblue;
 	Rook rookred, rookblue;
@@ -438,12 +471,12 @@ int main()
 		pb1.x / pionbiru.getLocalBounds().height,
 		pb1.y / pionbiru.getLocalBounds().height);
 
+
 	//starting point biru
 	menteribiru.setPosition(sf::Vector2f(28, 148));
 	rajabiru.setPosition(sf::Vector2f(193, 148));
 	bentengbiru.setPosition(sf::Vector2f(361, 148));
 	pionbiru.setPosition(sf::Vector2f(193, 279));
-
 
 
 	//menterimerah
