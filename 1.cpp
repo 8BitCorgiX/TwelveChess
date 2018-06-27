@@ -1,5 +1,6 @@
 #include<iostream>
 using namespace std;
+#include <vector>
 #include <SFML/Graphics.hpp>
 
 struct node
@@ -109,9 +110,34 @@ public:
 		temp = head;
 		for (int i = 0;i < idx; i++)
 		{
+			int isi=temp->data;
 			if (find == i) 
 			{
-				return temp->data;
+				return isi;
+			}
+			temp = temp->next;
+		}
+	}
+	int getIdxX(int find) {
+		node *temp = new node;
+		temp = head;
+		for (int i = 0; i < idx; i++)
+		{
+			if (find == temp->data)
+			{
+				return i;
+			}
+			temp = temp->next;
+		}
+	}
+	int getIdxY(int find) {
+		node *temp = new node;
+		temp = head;
+		for (int i = 0; i < idx; i++)
+		{
+			if (find == temp->data)
+			{
+				return i;
 			}
 			temp = temp->next;
 		}
@@ -382,33 +408,33 @@ int main()
 	DoubleLinkedList mapcoorX, mapcoorY;
 	//respawnmerah
 	mapcoorX.createNode(28); mapcoorY.createNode(672); //idx 0
-	mapcoorX.createNode(28 + 168); mapcoorY.createNode(672); //idx 1
-	mapcoorX.createNode(28 + 168+168); mapcoorY.createNode(672); //idx 2
+	mapcoorX.createNode(193); mapcoorY.createNode(672); //idx 1
+	mapcoorX.createNode(361); mapcoorY.createNode(672); //idx 2
 
 	//4
 	mapcoorX.createNode(28); mapcoorY.createNode(541); //idx 3
-	mapcoorX.createNode(28 + 168); mapcoorY.createNode(541); //idx 4
-	mapcoorX.createNode(28 + 168 + 168); mapcoorY.createNode(541); //idx 5
+	mapcoorX.createNode(193); mapcoorY.createNode(541); //idx 4
+	mapcoorX.createNode(361); mapcoorY.createNode(541); //idx 5
 
 	//3
 	mapcoorX.createNode(28); mapcoorY.createNode(410); //idx 6
-	mapcoorX.createNode(28 + 168); mapcoorY.createNode(410); //idx 7
-	mapcoorX.createNode(28 + 168 + 168); mapcoorY.createNode(410); //idx 8
+	mapcoorX.createNode(193); mapcoorY.createNode(410); //idx 7
+	mapcoorX.createNode(361); mapcoorY.createNode(410); //idx 8
 
 	//2
 	mapcoorX.createNode(28); mapcoorY.createNode(279); //idx 9
-	mapcoorX.createNode(28 + 168); mapcoorY.createNode(279); //idx 10
-	mapcoorX.createNode(28 + 168 + 168); mapcoorY.createNode(279); //idx 11
+	mapcoorX.createNode(193); mapcoorY.createNode(279); //idx 10
+	mapcoorX.createNode(361); mapcoorY.createNode(279); //idx 11
 
 	//1
 	mapcoorX.createNode(28); mapcoorY.createNode(148); //idx 12
-	mapcoorX.createNode(28 + 168); mapcoorY.createNode(148); //idx 13
-	mapcoorX.createNode(28 + 168 + 168); mapcoorY.createNode(148); //idx 14
+	mapcoorX.createNode(193); mapcoorY.createNode(148); //idx 13
+	mapcoorX.createNode(361); mapcoorY.createNode(148); //idx 14
 
 	//respawnbiru
 	mapcoorX.createNode(28); mapcoorY.createNode(17); //idx 15
-	mapcoorX.createNode(28 + 168); mapcoorY.createNode(17); //idx 16
-	mapcoorX.createNode(28 + 168 + 168); mapcoorY.createNode(17); //idx 17
+	mapcoorX.createNode(193); mapcoorY.createNode(17); //idx 16
+	mapcoorX.createNode(361); mapcoorY.createNode(17); //idx 17
 
 
 	//object chess piece;
@@ -489,8 +515,7 @@ int main()
 	menteribiru.setPosition(sf::Vector2f(28, 148));
 	rajabiru.setPosition(sf::Vector2f(193, 148));
 	bentengbiru.setPosition(sf::Vector2f(361, 148));
-	//pionbiru.setPosition(sf::Vector2f(193, 279));
-	pionbiru.setPosition(sf::Vector2f(mapcoorX.getCoor(2), mapcoorY.getCoor(6)));
+	pionbiru.setPosition(sf::Vector2f(193, 279));
 	
 
 
@@ -555,21 +580,378 @@ int main()
 	menterimerah.setPosition(sf::Vector2f(361, 541));
 	pionmerah.setPosition(sf::Vector2f(193, 410));
 
+
+	int stat1 = 0;
+	int stat2 = 0;
+	int turn = 1;
+	bool alreadyExecute = false;
 	while (window.isOpen())
 	{
-		
 		sf::Event event;
 		while (window.pollEvent(event))
 		{
 			if (event.type == sf::Event::Closed)
 				window.close();
 		}
+
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num1))
+		{
+			stat1 = 1;
+			stat2 = 1;
+			alreadyExecute = false;
+		}
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num2))
+		{
+			stat1 = 2;
+			stat2 = 2;
+			alreadyExecute = false;
+		}
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num3))
+		{
+			stat1 = 3;
+			stat2 = 3;
+			alreadyExecute = false;
+		}
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num4))
+		{
+			stat1 = 4;
+			stat2 = 4;
+			alreadyExecute = false;
+		}
+		if (event.type == sf::Event::KeyReleased)
+		{
+			if (!alreadyExecute)
+			{
+				if (event.key.code == sf::Keyboard::Numpad8 )
+				{
+					if (stat1 == 1 && turn == 1)
+					{
+						int x = pionbiru.getPosition().x;
+						int y = pionbiru.getPosition().y;
+						//pionbiru.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x)), mapcoorY.getCoor(mapcoorY.getIdxY(y) + 3)));
+						turn = 2;
+					}
+					else if (stat1 == 2 && turn == 1)
+					{
+						int x = bentengbiru.getPosition().x;
+						int y = bentengbiru.getPosition().y;
+						bentengbiru.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x)), mapcoorY.getCoor(mapcoorY.getIdxY(y) + 3)));
+						turn = 2;
+					}
+					else if (stat1 == 4 && turn == 1)
+					{
+						int x = rajabiru.getPosition().x;
+						int y = rajabiru.getPosition().y;
+						rajabiru.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x)), mapcoorY.getCoor(mapcoorY.getIdxY(y) + 3)));
+						turn = 2;
+					}
+					//p2
+					else if (stat2 == 1 && turn == 2)
+					{
+						int x = pionmerah.getPosition().x;
+						int y = pionmerah.getPosition().y;
+						pionmerah.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x)), mapcoorY.getCoor(mapcoorY.getIdxY(y) + 3)));
+						turn = 1;
+					}
+					else if (stat2 == 2 && turn == 2)
+					{
+						int x = bentengmerah.getPosition().x;
+						int y = bentengmerah.getPosition().y;
+						bentengmerah.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x)), mapcoorY.getCoor(mapcoorY.getIdxY(y) + 3)));
+						turn = 1;
+					}
+					else if (stat2 == 4 && turn == 2)
+					{
+						int x = rajamerah.getPosition().x;
+						int y = rajamerah.getPosition().y;
+						rajamerah.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x)), mapcoorY.getCoor(mapcoorY.getIdxY(y) + 3)));
+						turn = 1;
+					}
+					alreadyExecute = true;
+				}
+				if (event.key.code == sf::Keyboard::Numpad2)
+				{
+					if (stat1 == 1 && turn == 1)
+					{
+						int x = pionbiru.getPosition().x;
+						int y = pionbiru.getPosition().y;
+						pionbiru.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x)), mapcoorY.getCoor(mapcoorY.getIdxY(y) - 3)));
+						turn = 2;
+					}
+					else if (stat1 == 2 && turn == 1)
+					{
+						int x = bentengbiru.getPosition().x;
+						int y = bentengbiru.getPosition().y;
+						bentengbiru.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x)), mapcoorY.getCoor(mapcoorY.getIdxY(y) - 3)));
+						turn = 2;
+					}
+					else if (stat1 == 4 && turn == 1)
+					{
+						int x = rajabiru.getPosition().x;
+						int y = rajabiru.getPosition().y;
+						rajabiru.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x)), mapcoorY.getCoor(mapcoorY.getIdxY(y) - 3)));
+						turn = 2;
+					}
+					//p2
+					else if (stat2 == 1 && turn == 2)
+					{
+						int x = pionmerah.getPosition().x;
+						int y = pionmerah.getPosition().y;
+						pionmerah.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x)), mapcoorY.getCoor(mapcoorY.getIdxY(y) - 3)));
+						turn = 1;
+					}
+					else if (stat2 == 2 && turn == 2)
+					{
+						int x = bentengmerah.getPosition().x;
+						int y = bentengmerah.getPosition().y;
+						bentengmerah.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x)), mapcoorY.getCoor(mapcoorY.getIdxY(y) - 3)));
+						turn = 1;
+					}
+					else if (stat2 == 4 && turn == 2)
+					{
+						int x = rajamerah.getPosition().x;
+						int y = rajamerah.getPosition().y;
+						rajamerah.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x)), mapcoorY.getCoor(mapcoorY.getIdxY(y) - 3)));
+						turn = 1;
+					}
+					alreadyExecute = true;
+				}
+				if (event.key.code == sf::Keyboard::Numpad4)
+				{
+					if (stat1 == 1 && turn == 1)
+					{
+						int x = pionbiru.getPosition().x;
+						int y = pionbiru.getPosition().y;
+						pionbiru.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x) - 1), mapcoorY.getCoor(mapcoorY.getIdxY(y))));
+						turn = 2;
+					}
+					else if (stat1 == 2 && turn == 1)
+					{
+						int x = bentengbiru.getPosition().x;
+						int y = bentengbiru.getPosition().y;
+						bentengbiru.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x) - 1), mapcoorY.getCoor(mapcoorY.getIdxY(y))));
+						turn = 2;
+					}
+					else if (stat1 == 4 && turn == 1)
+					{
+						int x = rajabiru.getPosition().x;
+						int y = rajabiru.getPosition().y;
+						rajabiru.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x) - 1), mapcoorY.getCoor(mapcoorY.getIdxY(y))));
+						turn = 2;
+					}
+					//p2
+					else if (stat2 == 1 && turn == 2)
+					{
+						int x = pionmerah.getPosition().x;
+						int y = pionmerah.getPosition().y;
+						pionmerah.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x) - 1), mapcoorY.getCoor(mapcoorY.getIdxY(y))));
+						turn = 1;
+					}
+					else if (stat2 == 2 && turn == 2)
+					{
+						int x = bentengmerah.getPosition().x;
+						int y = bentengmerah.getPosition().y;
+						bentengmerah.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x) - 1), mapcoorY.getCoor(mapcoorY.getIdxY(y))));
+						turn = 1;
+					}
+					else if (stat2 == 4 && turn == 2)
+					{
+						int x = rajamerah.getPosition().x;
+						int y = rajamerah.getPosition().y;
+						rajamerah.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x) - 1), mapcoorY.getCoor(mapcoorY.getIdxY(y))));
+						turn = 1;
+					}
+					alreadyExecute = true;
+				}
+				if (event.key.code == sf::Keyboard::Numpad6)
+				{
+					if (stat1 == 1 && turn == 1)
+					{
+						int x = pionbiru.getPosition().x;
+						int y = pionbiru.getPosition().y;
+						pionbiru.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x) + 1), mapcoorY.getCoor(mapcoorY.getIdxY(y))));
+						turn = 2;
+					}
+					else if (stat1 == 2 && turn == 1)
+					{
+						int x = bentengbiru.getPosition().x;
+						int y = bentengbiru.getPosition().y;
+						bentengbiru.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x) + 1), mapcoorY.getCoor(mapcoorY.getIdxY(y))));
+						turn = 2;
+					}
+					else if (stat1 == 4 && turn == 1)
+					{
+						int x = rajabiru.getPosition().x;
+						int y = rajabiru.getPosition().y;
+						rajabiru.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x) + 1), mapcoorY.getCoor(mapcoorY.getIdxY(y))));
+						turn = 2;
+					}
+					//p2
+					else if (stat2 == 1 && turn == 2)
+					{
+						int x = pionmerah.getPosition().x;
+						int y = pionmerah.getPosition().y;
+						pionmerah.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x) + 1), mapcoorY.getCoor(mapcoorY.getIdxY(y))));
+						turn = 1;
+					}
+					else if (stat2 == 2 && turn == 2)
+					{
+						int x = bentengmerah.getPosition().x;
+						int y = bentengmerah.getPosition().y;
+						bentengmerah.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x) + 1), mapcoorY.getCoor(mapcoorY.getIdxY(y))));
+						turn = 1;
+					}
+					else if (stat2 == 4 && turn == 2)
+					{
+						int x = rajamerah.getPosition().x;
+						int y = rajamerah.getPosition().y;
+						rajamerah.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x) + 1), mapcoorY.getCoor(mapcoorY.getIdxY(y))));
+						turn = 1;
+					}
+					alreadyExecute = true;
+				}
+				if (event.key.code == sf::Keyboard::Numpad7)
+				{
+					if (stat1 == 3 && turn == 1)
+					{
+						int x = menteribiru.getPosition().x;
+						int y = menteribiru.getPosition().y;
+						menteribiru.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x) - 1), mapcoorY.getCoor(mapcoorY.getIdxY(y)+3)));
+						turn = 2;
+					}
+					else if (stat1 == 4 && turn == 1)
+					{
+						int x = rajabiru.getPosition().x;
+						int y = rajabiru.getPosition().y;
+						rajabiru.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x) - 1), mapcoorY.getCoor(mapcoorY.getIdxY(y)+3)));
+						turn = 2;
+					}
+					//p2
+					else if (stat2 == 3 && turn == 2)
+					{
+						int x = menterimerah.getPosition().x;
+						int y = menterimerah.getPosition().y;
+						menterimerah.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x) - 1), mapcoorY.getCoor(mapcoorY.getIdxY(y) + 3)));
+						turn = 1;
+					}
+					else if (stat2 == 4 && turn == 2)
+					{
+						int x = rajamerah.getPosition().x;
+						int y = rajamerah.getPosition().y;
+						rajamerah.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x) - 1), mapcoorY.getCoor(mapcoorY.getIdxY(y) + 3)));
+						turn = 1;
+					}
+					alreadyExecute = true;
+				}
+				if (event.key.code == sf::Keyboard::Numpad9)
+				{
+					if (stat1 == 3 && turn == 1)
+					{
+						int x = menteribiru.getPosition().x;
+						int y = menteribiru.getPosition().y;
+						menteribiru.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x) + 1), mapcoorY.getCoor(mapcoorY.getIdxY(y) + 3)));
+						turn = 2;
+					}
+					else if (stat1 == 4 && turn == 1)
+					{
+						int x = rajabiru.getPosition().x;
+						int y = rajabiru.getPosition().y;
+						rajabiru.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x) + 1), mapcoorY.getCoor(mapcoorY.getIdxY(y) + 3)));
+						turn = 2;
+					}
+					//p2
+					else if (stat2 == 3 && turn == 2)
+					{
+						int x = menterimerah.getPosition().x;
+						int y = menterimerah.getPosition().y;
+						menterimerah.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x) + 1), mapcoorY.getCoor(mapcoorY.getIdxY(y) + 3)));
+						turn = 1;
+					}
+					else if (stat2 == 4 && turn == 2)
+					{
+						int x = rajamerah.getPosition().x;
+						int y = rajamerah.getPosition().y;
+						rajamerah.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x) + 1), mapcoorY.getCoor(mapcoorY.getIdxY(y) + 3)));
+						turn = 1;
+					}
+					alreadyExecute = true;
+				}
+				if (event.key.code == sf::Keyboard::Numpad1)
+				{
+					if (stat1 == 3 && turn == 1)
+					{
+						int x = menteribiru.getPosition().x;
+						int y = menteribiru.getPosition().y;
+						menteribiru.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x) - 1), mapcoorY.getCoor(mapcoorY.getIdxY(y) - 3)));
+						turn = 2;
+					}
+					else if (stat1 == 4 && turn == 1)
+					{
+						int x = rajabiru.getPosition().x;
+						int y = rajabiru.getPosition().y;
+						rajabiru.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x) - 1), mapcoorY.getCoor(mapcoorY.getIdxY(y) - 3)));
+						turn = 2;
+					}
+					//p2
+					else if (stat2 == 3 && turn == 2)
+					{
+						int x = menterimerah.getPosition().x;
+						int y = menterimerah.getPosition().y;
+						menterimerah.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x) - 1), mapcoorY.getCoor(mapcoorY.getIdxY(y) - 3)));
+						turn = 1;
+					}
+					else if (stat2 == 4 && turn == 2)
+					{
+						int x = rajamerah.getPosition().x;
+						int y = rajamerah.getPosition().y;
+						rajamerah.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x) - 1), mapcoorY.getCoor(mapcoorY.getIdxY(y) - 3)));
+						turn = 1;
+					}
+					alreadyExecute = true;
+				}
+				if (event.key.code == sf::Keyboard::Numpad3)
+				{
+					if (stat1 == 3 && turn == 1)
+					{
+						int x = menteribiru.getPosition().x;
+						int y = menteribiru.getPosition().y;
+						menteribiru.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x) + 1), mapcoorY.getCoor(mapcoorY.getIdxY(y) - 3)));
+						turn = 2;
+					}
+					else if (stat1 == 4 && turn == 1)
+					{
+						int x = rajabiru.getPosition().x;
+						int y = rajabiru.getPosition().y;
+						rajabiru.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x) + 1), mapcoorY.getCoor(mapcoorY.getIdxY(y) - 3)));
+						turn = 2;
+					}
+					//p2
+					else if (stat2 == 3 && turn == 2)
+					{
+						int x = menterimerah.getPosition().x;
+						int y = menterimerah.getPosition().y;
+						menterimerah.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x) + 1), mapcoorY.getCoor(mapcoorY.getIdxY(y) - 3)));
+						turn = 1;
+					}
+					else if (stat2 == 4 && turn == 2)
+					{
+						int x = rajamerah.getPosition().x;
+						int y = rajamerah.getPosition().y;
+						rajamerah.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x) + 1), mapcoorY.getCoor(mapcoorY.getIdxY(y) - 3)));
+						turn = 1;
+					}
+					alreadyExecute = true;
+				}
+			}
+		}
 		window.clear();
+	
 		window.draw(background);
+		window.draw(pionbiru);
 		window.draw(menteribiru);
 		window.draw(rajabiru);
 		window.draw(bentengbiru);
-		window.draw(pionbiru);
+		
 		window.draw(pionmerah);
 		window.draw(menterimerah);
 		window.draw(rajamerah);
@@ -579,3 +961,4 @@ int main()
 	
 	return 0;
 }
+

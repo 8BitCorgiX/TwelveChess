@@ -1,5 +1,125 @@
 ﻿  1.cpp
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(493): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(118): warning C4715: 'DoubleLinkedList::getCoor': not all control paths return a value
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(629): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(630): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(636): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(637): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(638): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(643): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(644): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(645): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(651): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(652): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(653): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(658): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(659): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(660): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(665): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(666): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(667): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(676): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(677): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(678): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(683): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(684): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(685): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(690): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(691): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(692): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(698): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(699): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(700): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(705): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(706): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(707): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(712): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(713): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(714): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(723): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(724): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(725): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(730): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(731): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(732): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(737): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(738): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(739): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(745): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(746): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(747): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(752): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(753): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(754): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(759): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(760): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(761): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(770): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(771): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(772): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(777): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(778): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(779): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(784): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(785): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(786): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(792): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(793): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(794): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(799): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(800): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(801): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(806): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(807): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(808): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(817): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(818): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(819): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(824): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(825): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(826): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(832): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(833): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(834): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(839): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(840): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(841): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(850): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(851): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(852): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(857): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(858): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(859): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(865): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(866): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(867): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(872): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(873): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(874): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(883): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(884): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(885): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(890): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(891): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(892): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(898): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(899): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(900): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(905): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(906): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(907): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(916): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(917): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(918): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(923): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(924): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(925): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(931): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(932): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(933): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(938): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(939): warning C4244: 'initializing': conversion from 'const float' to 'int', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(940): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(144): warning C4715: 'DoubleLinkedList::getIdxY': not all control paths return a value
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(120): warning C4715: 'DoubleLinkedList::getCoor': not all control paths return a value
+c:\users\user\documents\visual studio 2017\projects\strukturdata\1.cpp(132): warning C4715: 'DoubleLinkedList::getIdxX': not all control paths return a value
 1.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
   strukturdata.vcxproj -> C:\Users\USER\Documents\Visual Studio 2017\Projects\strukturdata\Debug\strukturdata.exe
