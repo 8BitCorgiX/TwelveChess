@@ -722,8 +722,11 @@ int main()
 					{
 						int x = pionbiru.getPosition().x;
 						int y = pionbiru.getPosition().y;
-						pionbiru.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x) - 1), mapcoorY.getCoor(mapcoorY.getIdxY(y))));
-						turn = 2;
+						if(mapcoorX.getCoor(mapcoorX.getIdxX(x) - 1)<=28)
+						{
+							pionbiru.setPosition(sf::Vector2f(mapcoorX.getCoor(mapcoorX.getIdxX(x) - 1), mapcoorY.getCoor(mapcoorY.getIdxY(y))));
+							turn = 2;
+						}
 					}
 					else if (stat1 == 2 && turn == 1)
 					{
