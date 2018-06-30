@@ -125,16 +125,18 @@ protected:
 	double nextx, nexty;
 	bool alive;
 	int alternative;
+	int point;
 public:
 	Soldier()
 	{}
-	Soldier(double xx, double yy, double nextxx, double nextyy, bool alivee)
+	Soldier(double xx, double yy, double nextxx, double nextyy, bool alivee, int pointt)
 	{
 		x = xx;
 		y = yy;
 		nextx = nextxx;
 		nexty = nextyy;
 		alive = alivee;
+		point = pointt;
 	}
 	void setX(double xx)
 	{
@@ -168,6 +170,10 @@ public:
 	{
 		return nexty;
 	}
+	int getPoint()
+	{
+		return point;
+	}
 	bool isAlive()
 	{
 		if (isAlive())
@@ -196,44 +202,94 @@ public:
 		nexty = nextyy;
 		alive = alivee;
 		alternative = alter;
+		point = 8;
 	}
 	void setAlter(int alter)
 	{
 		alternative = alter;
 	}
-	void getAlter()
+	void getAlterX()
 	{
 		if (alternative == 1)
 		{
-
+			//kanan
+			x = x + 168;
 		}
 		else if (alternative == 2)
 		{
+			//kiri
+			x = x - 168;
 		}
 		else if (alternative == 3)
 		{
+			//atas
 		}
 		else if (alternative == 4)
 		{
-
+			//bawah
 		}
 		else if (alternative == 5)
 		{
+			//kanan atas
+			x = x + 168;
 		}
 		else if (alternative == 6)
 		{
-
+			//kanan bawah
+			x = x + 168;
 		}
 		else if (alternative == 7)
 		{
-
+			//kiri atas
+			x = x - 168;
 		}
 		else if (alternative == 8)
 		{
-
+			//kiri bawah
+			x = x - 168;
 		}
 	}
-
+	void getAlterY()
+	{
+		if (alternative == 1)
+		{
+			//kanan
+		}
+		else if (alternative == 2)
+		{
+			//kiri
+		}
+		else if (alternative == 3)
+		{
+			//atas
+			y = y - 131;
+		}
+		else if (alternative == 4)
+		{
+			//bawah
+			y = y + 131;
+		}
+		else if (alternative == 5)
+		{
+			//kanan atas
+			y = y - 131;
+		}
+		else if (alternative == 6)
+		{
+			//kanan bawah
+			y = y + 131;
+		}
+		else if (alternative == 7)
+		{
+			//kiri atas
+			y = y - 131;
+		}
+		else if (alternative == 8)
+		{
+			//kiri bawah
+			y = y + 131;
+		}
+	}
 
 };
 
@@ -251,26 +307,52 @@ public:
 		nextx = nextxx;
 		nexty = nextyy;
 		alive = alivee;
+		point = 4;
 	}
 	void setAlter(int alter)
 	{
 		alternative = alter;
 	}
-	void getAlter()
+	void getAlterX()
 	{
 		if (alternative == 1)
 		{
-
+			//kanan
+			x = x + 168;
 		}
 		else if (alternative == 2)
 		{
+			//kiri
+			x = x - 168;
 		}
 		else if (alternative == 3)
 		{
+			//atas
 		}
 		else if (alternative == 4)
 		{
-
+			//bawah
+		}
+	}
+	void getAlterY()
+	{
+		if (alternative == 1)
+		{
+			//kanan
+		}
+		else if (alternative == 2)
+		{
+			//kiri
+		}
+		else if (alternative == 3)
+		{
+			//atas
+			y = y - 131;
+		}
+		else if (alternative == 4)
+		{
+			//bawah
+			y = y + 131;
 		}
 	}
 };
@@ -287,26 +369,52 @@ public:
 		nextx = nextxx;
 		nexty = nextyy;
 		alive = alivee;
+		point = 4;
 	}
 	void setAlter(int alter)
 	{
 		alternative = alter;
 	}
-	void getAlter()
+	void getAlterX()
 	{
 		if (alternative == 1)
 		{
-
+			//kanan
+			x = x + 168;
 		}
 		else if (alternative == 2)
 		{
+			//kiri
+			x = x - 168;
 		}
 		else if (alternative == 3)
 		{
+			//atas
 		}
 		else if (alternative == 4)
 		{
-
+			//bawah
+		}
+	}
+	void getAlterY()
+	{
+		if (alternative == 1)
+		{
+			//kanan
+		}
+		else if (alternative == 2)
+		{
+			//kiri
+		}
+		else if (alternative == 3)
+		{
+			//atas
+			y = y - 131;
+		}
+		else if (alternative == 4)
+		{
+			//bawah
+			y = y + 131;
 		}
 	}
 };
@@ -326,41 +434,84 @@ public:
 		nexty = nextyy;
 		alive = alivee;
 		promotion = promotionn;
+		point = 1;
 	}
 	void setAlter(int alter)
 	{
 		alternative = alter;
 	}
-	void getAlter()
+	void getAlterX()
 	{
 		if (alternative == 1)
 		{
-
+			//kanan
+			x = x + 168;
 		}
 		else if (alternative == 2)
 		{
+			//kiri
+			x = x - 168;
 		}
 		else if (alternative == 3)
 		{
+			//atas
 		}
 		else if (alternative == 4)
 		{
-
+			//bawah
 		}
 		else if (alternative == 5)
 		{
+			//kanan atas
 		}
 		else if (alternative == 6)
 		{
-
+			//kanan bawah
 		}
 		else if (alternative == 7)
 		{
-
+			//kiri atas
 		}
 		else if (alternative == 8)
 		{
-
+			//kiri bawah
+		}
+	}
+	void getAlterY()
+	{
+		if (alternative == 1)
+		{
+			//kanan
+		}
+		else if (alternative == 2)
+		{
+			//kiri
+		}
+		else if (alternative == 3)
+		{
+			//atas
+			y = y - 131;
+		}
+		else if (alternative == 4)
+		{
+			//bawah
+			y = y + 131;
+		}
+		else if (alternative == 5)
+		{
+			//kanan atas
+		}
+		else if (alternative == 6)
+		{
+			//kanan bawah
+		}
+		else if (alternative == 7)
+		{
+			//kiri atas
+		}
+		else if (alternative == 8)
+		{
+			//kiri bawah
 		}
 	}
 	bool isPromotion()
@@ -375,6 +526,7 @@ public:
 		}
 	}
 };
+
 
 int main()
 {
@@ -489,8 +641,9 @@ int main()
 	menteribiru.setPosition(sf::Vector2f(28, 148));
 	rajabiru.setPosition(sf::Vector2f(193, 148));
 	bentengbiru.setPosition(sf::Vector2f(361, 148));
-	//pionbiru.setPosition(sf::Vector2f(193, 279));
-	pionbiru.setPosition(sf::Vector2f(mapcoorX.getCoor(2), mapcoorY.getCoor(6)));
+	pionbiru.setPosition(sf::Vector2f(193, 279));
+	//pionbiru.setPosition(sf::Vector2f(mapcoorX.getCoor(2), mapcoorY.getCoor(6)));
+	
 	
 
 
